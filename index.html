@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="head">
+    
+    <title>CSS Toggle Example</title>
+
+</head>
+<body>
+    <header>
+    <h1>My Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+    <h2>Welcome to My Website</h2>
+    <p>This a simple website</p>
+    <button onclick="addCSS()" id="button">Toggle CSS</button>
+    </main>
+    <footer>
+        <p>Copyright&#169; ShineComputer Infotech</p>
+    </footer>
+    <script>
+        let counter = 0
+    function addCSS() {
+      counter++
+      if (counter % 2 !== 0) {
+        document.getElementById("head").innerHTML = '  <title>CSS Toggle Example</title> \n<link rel="stylesheet" href="./style.css" />'
+      } else {
+
+        document.getElementById("head").innerHTML = '  <title>CSS Toggle Example</title> '
+
+      }
+    }
+    </script>
+    
+</body>
+</html>
